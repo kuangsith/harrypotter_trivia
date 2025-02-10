@@ -1,6 +1,6 @@
 # 🧙‍♂️ Harry Potter Trivia Game  
 
-A Flask-based Harry Potter trivia game that generates quiz questions using **Google Gemini AI** and stores scores in **Google BigQuery**. Players answer **10 questions**, submit their name, and view **daily/weekly leaderboards**.  
+A Flask-based Harry Potter trivia game that generates quiz questions using **Google Gemini AI** and stores scores in **Google BigQuery**. Players answer **10 questions**, submit their name, and view **daily leaderboards**.  
 
 🔗 **Try playing the game:**  
 [https://harry-potter-trivia-195813819523.us-west1.run.app](https://harry-potter-trivia-195813819523.us-west1.run.app)  
