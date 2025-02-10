@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Trivia Game</h1>
+        <p>{{ question }}</p>
+        
+        {% if result %}
+            <p class="result {% if 'Wrong' in result %}wrong{% else %}correct{% endif %}">{{ result }}</p>
+
+
+            <p>Score: {{ score }}</p>
+            {% if next_question %}
+                <a href="{{ url_for('trivia') }}"><button>Next Question</button></a>
+            {% else %}
+                <a href="{{ url_for('name_inquiry') }}"><button>See Results</button></a>
+            {% endif %}
+        {% else %}
+            <form method="POST">
+                <input type="text" name="answer" placeholder="Your answer..." required>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
